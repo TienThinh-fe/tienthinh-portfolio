@@ -1,5 +1,6 @@
 import { LandingContent } from "./LandingContent";
 import { Scene } from "./Scene";
+import { MouseScroll } from "./MouseScroll";
 
 export function Landing() {
   return (
@@ -8,6 +9,7 @@ export function Landing() {
         <LandingContent />
         <Scene />
       </div>
+      <MouseScroll />
     </div>
   );
 }

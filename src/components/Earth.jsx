@@ -15,7 +15,7 @@ export function Earth() {
       ref={modelRef}
       object={model.scene}
       dispose={null}
-      scale={0.24}
+      scale={0.32}
     />
   );
 }
