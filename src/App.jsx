@@ -1,4 +1,4 @@
-import { Landing } from "./components";
+import { Landing, Contact } from "./components";
 import useStore from "./store";
 
 function App() {
@@ -7,6 +7,7 @@ function App() {
   return (
     <div className={`App App--${theme}`}>
       <Landing />
+      <Contact />
     </div>
   );
 }
