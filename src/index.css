@@ -89,6 +89,7 @@ video {
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  scroll-behavior: smooth;
 }
 /* HTML5 display-role reset for older browsers */
 article,

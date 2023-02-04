@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import useStore from "../store";
 import { ContactItem } from "./ContactItem";
 
@@ -8,10 +8,11 @@ import LinkedinLight from "../assets/linkedin-light.webp";
 import LinkedinDark from "../assets/linkedin-dark.webp";
 import GmailLight from "../assets/gmail-light.webp";
 import GmailDark from "../assets/gmail-dark.webp";
-import Hackerrank from "../assets/hackerrank.webp";
 
 export function Contact() {
   const theme = useStore((state) => state.theme);
+  const setContactRef = useStore((state) => state.setContactRef);
+  const ref = useRef(null);
   const [contact, setContact] = useState([
     {
       imgSrc: GithubLight,
@@ -24,10 +25,6 @@ export function Contact() {
     {
       imgSrc: GmailLight,
       link: "tienthinhhoang317@gmail.com",
-    },
-    {
-      imgSrc: Hackerrank,
-      link: "hackerrank.com/HoangTienThinh",
     },
   ]);
 
@@ -46,10 +43,6 @@ export function Contact() {
           imgSrc: GmailLight,
           link: "tienthinhhoang317@gmail.com",
         },
-        {
-          imgSrc: Hackerrank,
-          link: "hackerrank.com/HoangTienThinh",
-        },
       ]);
     } else {
       setContact([
@@ -65,16 +58,16 @@ export function Contact() {
           imgSrc: GmailDark,
           link: "tienthinhhoang317@gmai.com",
         },
-        {
-          imgSrc: Hackerrank,
-          link: "hackerrank.com/HoangTienThinh",
-        },
       ]);
     }
   }, [theme]);
 
+  useEffect(() => {
+    setContactRef(ref);
+  }, []);
+
   return (
-    <div className="contact">
+    <div className="contact" ref={ref}>
       <div className="contact__title">
         <span>Wanna contact me?</span>
         <br />

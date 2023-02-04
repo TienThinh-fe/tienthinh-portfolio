@@ -117,8 +117,10 @@ body,
 }
 
 .contact {
-  width: 80%;
+  width: 50%;
   margin: 0 auto;
+  padding-top: 60px;
+  height: 50vh;
   &__title {
     margin-bottom: 16px;
     span:nth-child(1) {

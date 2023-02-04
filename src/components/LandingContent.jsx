@@ -1,7 +1,14 @@
 import { LandingButton } from "./LandingButton";
 import { Theme } from "./Theme";
+import useStore from "../store";
 
 export function LandingContent() {
+  const contactRef = useStore((state) => state.contactRef);
+
+  function handleScrollToContact() {
+    contactRef.current.scrollIntoView();
+  }
+
   return (
     <div className="landing--content">
       <Theme />
@@ -23,7 +30,7 @@ export function LandingContent() {
       </div>
       <div className="landing--content__button">
         <LandingButton name="Work and Experience" />
-        <LandingButton name="Contact" />
+        <LandingButton name="Contact" handleClick={handleScrollToContact} />
       </div>
     </div>
   );
