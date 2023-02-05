@@ -8,14 +8,10 @@ export function Earth() {
 
   useFrame((state, delta) => {
     modelRef.current.rotation.y += delta / 3;
+    modelRef.current.rotation.x += delta / 3;
   });
 
   return (
-    <primitive
-      ref={modelRef}
-      object={model.scene}
-      dispose={null}
-      scale={0.32}
-    />
+    <primitive ref={modelRef} object={model.scene} dispose={null} scale={1.6} />
   );
 }
