@@ -3,7 +3,7 @@ import { useFrame } from "@react-three/fiber";
 import { useRef } from "react";
 
 export function Earth() {
-  const model = useGLTF("/scene.gltf");
+  const model = useGLTF("/planet.gltf");
   const modelRef = useRef();
 
   useFrame((state, delta) => {
