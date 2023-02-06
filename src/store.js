@@ -6,6 +6,9 @@ const useStore = create((set) => ({
 
   contactRef: {},
   setContactRef: (contactRef) => set({ contactRef }),
+
+  workRef: {},
+  setWorkRef: (workRef) => set({ workRef }),
 }));
 
 export default useStore;

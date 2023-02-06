@@ -4,9 +4,14 @@ import useStore from "../store";
 
 export function LandingContent() {
   const contactRef = useStore((state) => state.contactRef);
+  const workRef = useStore((state) => state.workRef);
 
   function handleScrollToContact() {
     contactRef.current.scrollIntoView();
+  }
+
+  function handleScrollToWork() {
+    workRef.current.scrollIntoView();
   }
 
   return (
@@ -29,7 +34,10 @@ export function LandingContent() {
         </span>
       </div>
       <div className="landing--content__button">
-        <LandingButton name="Work and Experience" />
+        <LandingButton
+          name="Work and Experience"
+          handleClick={handleScrollToWork}
+        />
         <LandingButton name="Contact" handleClick={handleScrollToContact} />
       </div>
     </div>
