@@ -20,10 +20,27 @@ export function WorkItem({
       </div>
       <div className="work-item__detail">
         <ul>
-          <li>
-            <span>Github: </span>
-            <span>{github}</span>
-          </li>
+          {Array.isArray(github) ? (
+            github.map((link, index) => (
+              <li key={index}>
+                <span>Github {index + 1}: </span>
+                <span>
+                  <a href={link} target="_blank">
+                    {link}
+                  </a>
+                </span>
+              </li>
+            ))
+          ) : (
+            <li>
+              <span>Github: </span>
+              <span>
+                <a href={github} target="_blank">
+                  {github}
+                </a>
+              </span>
+            </li>
+          )}
           <li>
             <span>Tech stack: </span>
             <span>{techStack}</span>
@@ -32,7 +49,13 @@ export function WorkItem({
             <span>Description: </span>
             <span>{description}</span>
           </li>
-          <li className={`visit visit__${theme}`}>Visit</li>
+          {live && (
+            <li className={`visit visit__${theme}`}>
+              <a href={live} target="_blank">
+                Visit
+              </a>
+            </li>
+          )}
         </ul>
       </div>
     </div>
