@@ -20,9 +20,18 @@ export function WorkItem({
       </div>
       <div className="work-item__detail">
         <ul>
-          <li>Github: {github}</li>
-          <li>Tech stack: {techStack}</li>
-          <li>Description: {description}</li>
+          <li>
+            <span>Github: </span>
+            <span>{github}</span>
+          </li>
+          <li>
+            <span>Tech stack: </span>
+            <span>{techStack}</span>
+          </li>
+          <li>
+            <span>Description: </span>
+            <span>{description}</span>
+          </li>
           <li className={`visit visit__${theme}`}>Visit</li>
         </ul>
       </div>
