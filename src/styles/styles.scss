@@ -14,9 +14,16 @@ body,
   color: utils.$text-color-light;
   transition: all 0.2s ease-in-out;
   opacity: 1 !important;
+  a {
+    text-decoration: none;
+    color: utils.$text-color-light;
+  }
   &--dark {
     background-color: utils.$bg-color-dark;
     color: utils.$text-color-dark;
+    a {
+      color: utils.$text-color-dark;
+    }
     .work-item__preview--title {
       color: white;
     }
@@ -248,7 +255,7 @@ body,
       position: absolute;
       font-size: 40px;
       font-weight: 900;
-      top: -24px;
+      top: -28px;
       left: 24px;
       color: utils.$text-color-dark;
       mix-blend-mode: difference;
@@ -273,18 +280,22 @@ body,
         span:nth-child(1) {
           font-weight: 600;
         }
-        &:last-child {
+      }
+      .visit {
+        margin-top: 40px;
+        a {
           max-width: 40px;
-          margin-top: 40px;
-          padding: 12px 24px;
           border-radius: 12px;
           text-align: center;
           cursor: pointer;
           border: 1px solid utils.$text-color-light;
+          padding: 12px 24px;
         }
       }
       .visit__dark {
-        border-color: utils.$text-color-dark !important;
+        a {
+          border-color: utils.$text-color-dark !important;
+        }
       }
     }
   }
