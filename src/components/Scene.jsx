@@ -1,7 +1,8 @@
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
-import { useState, useEffect } from "react";
+import { Suspense } from "react";
 import { Earth } from "./Earth";
+import { Placeholder } from "./Placeholder";
 import useStore from "../store";
 
 export function Scene() {
@@ -24,7 +25,9 @@ export function Scene() {
         <directionalLight castShadow position={[1, 2, 3]} intensity={1.2} />
         <ambientLight intensity={0.5} />
 
-        <Earth />
+        <Suspense fallback={<Placeholder />}>
+          <Earth />
+        </Suspense>
       </Canvas>
     </div>
   );

@@ -13,6 +13,7 @@ body,
   background-color: utils.$bg-color-light;
   color: utils.$text-color-light;
   transition: all 0.2s ease-in-out;
+  opacity: 1 !important;
   &--dark {
     background-color: utils.$bg-color-dark;
     color: utils.$text-color-dark;
@@ -289,5 +290,32 @@ body,
   }
   &:nth-child(even) {
     flex-direction: row-reverse;
+  }
+}
+
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: utils.$bg-color-light;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  &__text {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    font-weight: 300;
+    color: utils.$text-color-light;
+    font-family: utils.$mono-font;
+  }
+  &__dark {
+    background: utils.$bg-color-dark;
+    .loading__text {
+      color: utils.$text-color-dark;
+    }
   }
 }
