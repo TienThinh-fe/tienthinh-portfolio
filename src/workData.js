@@ -6,7 +6,7 @@ import FeMentor from "./assets/fe-mentor.webp";
 const workData = [
   {
     id: 1,
-    title: "E-Commerce Site",
+    title: "CRWN Clothing",
     github: "https://github.com/TienThinh-fe/crwn-clothing-react",
     live: "https://crwn-golive.herokuapp.com/",
     techStack: "React, Redux, Firebase, Stripe, Heroku",
