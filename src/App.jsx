@@ -23,10 +23,10 @@ function App() {
         <motion.div
           className={`loading loading__${theme}`}
           key="modal"
-          initial={{ opacity: 0, y: -100 }}
+          initial={{ opacity: 0, y: -200 }}
           animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: 100 }}
-          transition={{ duration: 0.5 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.8 }}
         >
           <motion.div className="loading__text">Welcome</motion.div>
         </motion.div>
