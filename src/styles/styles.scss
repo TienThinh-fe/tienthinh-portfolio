@@ -46,6 +46,10 @@ body,
       font-family: utils.$handwrite-font;
     }
   }
+  @media only screen and (max-width: utils.$mobile-width) {
+    width: 100%;
+    height: 48%;
+  }
 }
 
 .landing {
@@ -58,6 +62,10 @@ body,
     display: flex;
     justify-content: space-around;
     align-items: center;
+
+    @media only screen and (max-width: utils.$mobile-width) {
+      flex-direction: column-reverse;
+    }
   }
 }
 
@@ -86,6 +94,26 @@ body,
     margin-top: 32px;
     display: flex;
     flex-direction: column;
+  }
+
+  @media only screen and (max-width: utils.$mobile-width) {
+    &__subtitle {
+      span {
+        font-size: 12px;
+      }
+    }
+    &__title {
+      margin-top: 4px;
+      margin-bottom: 12px;
+      span {
+        font-size: 52px;
+      }
+    }
+    &__about {
+      span {
+        font-size: 12px;
+      }
+    }
   }
 }
 
@@ -124,6 +152,9 @@ body,
     span {
       border-color: utils.$text-color-dark;
     }
+  }
+  @media only screen and (max-width: utils.$mobile-width) {
+    margin-bottom: 20px;
   }
 }
 
@@ -209,6 +240,9 @@ body,
     .roll {
       background: utils.$text-color-dark;
     }
+  }
+  @media only screen and (max-width: utils.$mobile-width) {
+    display: none;
   }
 }
 
