@@ -12,6 +12,7 @@
     "vite": "^5.2.0"
   },
   "dependencies": {
-    "@fontsource-variable/montserrat": "^5.0.19"
+    "@fontsource-variable/montserrat": "^5.0.19",
+    "gsap": "^3.12.5"
   }
 }
