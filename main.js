@@ -14,7 +14,7 @@ gsap.to(sections, {
     trigger: '.main',
     pin: true,
     scrub: 1,
-    // end: '+=3000',
+    end: '+=2000',
     // snap: 1 / (sections.length - 1),
     // markers: true, // TODO: remove on production
   },

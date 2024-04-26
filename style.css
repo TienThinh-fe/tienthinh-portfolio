@@ -160,3 +160,41 @@ a {
     }
   }
 }
+
+.info-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+
+  .info--text__wrapper {
+    width: 420px;
+
+    .info--text {
+      font-size: 1.6rem;
+      color: #dadada;
+      display: block;
+    }
+  }
+
+  .logo-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+  }
+
+  .logo-wrapper__first {
+    display: flex;
+    gap: 20px;
+  }
+
+  .logo-wrapper__second {
+    display: flex;
+    gap: 20px;
+  }
+}
+
+strong {
+  font-weight: 700;
+}
